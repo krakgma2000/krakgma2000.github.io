@@ -1,0 +1,74 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <style>
+    body {
+      background-color: lightblue;
+      font-family: Arial, sans-serif;
+      transition: background-image 2s ease-in-out;
+      font-family: 'Roboto', sans-serif;
+      background-repeat: no-repeat; /* Para que no se repita */
+      background-size: cover; /* Para que cubra todo el espacio disponible */
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      font-size: 40px;
+    }
+
+    p {
+      text-align: center;
+      color: white;
+      font-size: 30px;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 15px 30px;
+      font-size: 25px;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+  </style>
+</head>
+<body>
+  <h1>ENHORABONA</h1>
+  <p>ESTÀS PREPARADA PER SABER QUIN ES EL TEU REGAL?</p>
+  <button id="mostrar">Mostrar el teu regal</button>
+  <p id="regal" style="display: none;">El teu regal es...</p>
+  <p id="regal-descr-1" style="display: none;">UNA ESCAPADA ROMÀNTICA A LA MUNTANYA</p>
+  <p id="regal-descr-2" style="display: none;">TOTALMENT ORGANITZADA PEL TEU NOVIO 😊</p>
+  <script>
+    // Obtenim els elements del document
+    var button = document.getElementById("mostrar");
+    var regal = document.getElementById("regal");
+    var regal_descr_1 = document.getElementById("regal-descr-1");
+    var regal_descr_2 = document.getElementById("regal-descr-2");
+
+    // Afegim un esdeveniment al botó
+    button.addEventListener("click", function() {
+      // Mostrem el regal i amaguem el botó
+      regal.style.display = "block";
+      regal_descr_1.style.display = "block";
+      regal_descr_2.style.display = "block";
+      button.style.display = "none";
+
+    // Obtenemos el elemento body
+    var body = document.getElementsByTagName("body")[0];
+    // Cambiamos el color de fondo por la imagen que tenemos en el local
+    body.style.backgroundImage = "url('imagen.jpg')";
+    });
+  </script>
+</body>
+</html>
